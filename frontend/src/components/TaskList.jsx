@@ -9,7 +9,7 @@ const TaskList = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/tasks', {
+      const response = await fetch('https://cloud-2-1.vercel.app/api/tasks', {
         credentials: 'include'
       });
       if (!response.ok) {
@@ -34,7 +34,7 @@ const TaskList = () => {
 
   const handleTaskStatusChange = async (taskId, completed) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
+      const response = await fetch(`https://cloud-2-1.vercel.app/api/tasks/${taskId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const TaskList = () => {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
+      const response = await fetch(`https://cloud-2-1.vercel.app/api/tasks/${taskId}`, {
         method: 'DELETE',
         credentials: 'include'
       });
@@ -150,4 +150,4 @@ const TaskList = () => {
   );
 };
 
-export default TaskList; 
+export default TaskList;

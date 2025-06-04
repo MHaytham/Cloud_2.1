@@ -12,7 +12,7 @@ const AddTask = ({ onTaskAdded }) => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/tasks', {
+      const response = await fetch('https://cloud-2-1.vercel.app/api/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -84,4 +84,4 @@ const AddTask = ({ onTaskAdded }) => {
   );
 };
 
-export default AddTask; 
+export default AddTask;
